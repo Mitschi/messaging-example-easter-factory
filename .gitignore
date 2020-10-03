@@ -1,3 +1,4 @@
 /.idea/
 /messagingexample.iml
-/target/
+**/target/
+*.jar

@@ -4,65 +4,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.mitschi</groupId>
-    <artifactId>messaging-example</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>messaging-example-hen</module>
-        <module>messaging-example-painter-bunny</module>
-        <module>messaging-example-emptier-bunny</module>
-        <module>messaging-example-assembler-bunny</module>
-        <module>messaging-example-delivery-bunny</module>
-        <module>messaging-example-entities</module>
-        <module>messaging-example-utils</module>
-    </modules>
+    <parent>
+        <groupId>com.github.mitschi</groupId>
+        <artifactId>messaging-example</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <name>messaging-example</name>
+    <artifactId>messaging-example-emptier-bunny</artifactId>
+
+    <name>messaging-example-emptier-bunny</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-all</artifactId>
-                <version>5.15.11</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.mitschi</groupId>
-                <artifactId>messaging-example-utils</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.mitschi</groupId>
-                <artifactId>messaging-example-entities</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>com.github.mitschi</groupId>
+            <artifactId>messaging-example-utils</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-all</artifactId>
+            <groupId>com.github.mitschi</groupId>
+            <artifactId>messaging-example-entities</artifactId>
         </dependency>
     </dependencies>
 
