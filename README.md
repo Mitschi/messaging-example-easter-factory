@@ -21,6 +21,6 @@ To run the clients, start the produced jar file with the respective Main classes
 * Hen: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.HenMain H1 2000`
 * EmptierBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.EmptierBunny EB1 2000`
 * PainterBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.PainterBunnyMain PB1 2000 green`
-* AssemblerBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.AssemblerBunnyMain H1 2000 3`
-* DeliveryBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.DeliveryBunnyMain H1 2000`
+* AssemblerBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.AssemblerBunnyMain AB1 2000 3`
+* DeliveryBunny: `java -cp messagingexample-1.0-SNAPSHOT.jar com.github.mitschi.hen.DeliveryBunnyMain DB1 2000`
 
