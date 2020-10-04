@@ -4,4 +4,6 @@ VOLUME /tmp
 #OPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 #COPY ${DEPENDENCY}/META-INF /app/META-INF
 #COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.github.mitschi.DeliveryBunnyMain"]
+COPY target/messaging-example-delivery-bunny-1.0-SNAPSHOT.jar /app
+ENTRYPOINT ["java","-cp","app:app/messaging-example-delivery-bunny-1.0-SNAPSHOT.jar","com.github.mitschi.deliveryBunny.DeliveryBunnyMain"]
+#ENTRYPOINT ["java","-cp","app:app/lib/*","com.github.mitschi.deliveryBunny.DeliveryBunnyMain"]

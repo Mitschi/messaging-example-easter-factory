@@ -1,0 +1,84 @@
+# schaumamal
+version: '3'
+
+services:
+  activemqMessagingExample:
+    container_name: activemqMessagingExample
+    image: rmohr/activemq:latest
+    expose:
+      - "61616"
+      - "8161"
+    ports:
+      - "8161:8161"
+      - "61616:61616"
+    restart: always
+
+  hen1:
+    container_name: hen1-messaging-example
+    image: mitschi/messaging-example-hen
+
+  hen2:
+    container_name: hen2-messaging-example
+    image: mitschi/messaging-example-hen
+
+  hen3:
+    container_name: hen3-messaging-example
+    image: mitschi/messaging-example-hen
+
+  hen4:
+    container_name: hen4-messaging-example
+    image: mitschi/messaging-example-hen
+
+  emptier1:
+    container_name: emptier1-messaging-example
+    image: mitschi/messaging-example-emptier-bunny
+
+  emptier2:
+    container_name: emptier2-messaging-example
+    image: mitschi/messaging-example-emptier-bunny
+
+  emptier3:
+    container_name: emptier3-messaging-example
+    image: mitschi/messaging-example-emptier-bunny
+
+  painter1:
+    container_name: painter1-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+  painter2:
+    container_name: painter2-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+  painter3:
+    container_name: painter3-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+  painter4:
+    container_name: painter4-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+  painter5:
+    container_name: painter5-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+  painter6:
+    container_name: painter6-messaging-example
+    image: mitschi/messaging-example-painter-bunny
+
+
+  assembler1:
+    container_name: assembler1-messaging-example
+    image: mitschi/messaging-example-assembler-bunny
+
+  assembler2:
+    container_name: assembler2-messaging-example
+    image: mitschi/messaging-example-assembler-bunny
+
+  assembler3:
+    container_name: assembler3-messaging-example
+    image: mitschi/messaging-example-assembler-bunny
+
+
+  delivery1:
+    container_name: delivery1-messaging-example
+    image: mitschi/messaging-example-delivery-bunny

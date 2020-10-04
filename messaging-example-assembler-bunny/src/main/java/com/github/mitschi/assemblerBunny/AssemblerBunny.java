@@ -25,10 +25,10 @@ public class AssemblerBunny {
             System.out.println("AssemblerBunny "+name+" is starting with the job.");
             boolean interrupted=false;
 
-            MessageConsumer consumer = ActiveMQUtils.createConsumer("localhost", "coloredEggs");
+            MessageConsumer consumer = ActiveMQUtils.createConsumer(ActiveMQUtils.CURRENT_TESTHOST, "coloredEggs");
 
             ActiveMQUtils assembledNestsQueue = new ActiveMQUtils();
-            assembledNestsQueue.init("assembledNests","localhost");
+            assembledNestsQueue.init("assembledNests",ActiveMQUtils.CURRENT_TESTHOST);
 
             while(!interrupted) {
                 Nest nest = new Nest();
@@ -53,6 +53,7 @@ public class AssemblerBunny {
         } catch (InterruptedException e) {
         } catch (Exception e) {
             System.out.println("Something happened.. try restart ;)");
+            e.printStackTrace();
         }
     }
 }

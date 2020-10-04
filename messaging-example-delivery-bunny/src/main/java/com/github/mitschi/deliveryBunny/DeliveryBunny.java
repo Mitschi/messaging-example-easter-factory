@@ -23,7 +23,7 @@ public class DeliveryBunny {
             System.out.println("DeliveryBunny "+name+" is starting with the job.");
             boolean interrupted=false;
 
-            MessageConsumer consumer = ActiveMQUtils.createConsumer("localhost", "assembledNests");
+            MessageConsumer consumer = ActiveMQUtils.createConsumer(ActiveMQUtils.CURRENT_TESTHOST, "assembledNests");
 
             while(!interrupted) {
                 Message message = consumer.receive();
@@ -39,7 +39,6 @@ public class DeliveryBunny {
                     }
                 }
             }
-
         } catch (InterruptedException e) {
         } catch (Exception e) {
             System.out.println("Something happened.. try restart ;)");

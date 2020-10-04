@@ -21,7 +21,7 @@ public class Hen {
             boolean interrupted=false;
 
             ActiveMQUtils laidEggsQueue = new ActiveMQUtils();
-            laidEggsQueue.init("laidEggs","localhost");
+            laidEggsQueue.init("laidEggs",ActiveMQUtils.CURRENT_TESTHOST);
 
             while(!interrupted) {
                 Egg egg = new Egg();
@@ -35,6 +35,7 @@ public class Hen {
 
         } catch (Exception e) {
             System.out.println("Something happened.. try restart ;)");
+            e.printStackTrace();
         }
     }
 }

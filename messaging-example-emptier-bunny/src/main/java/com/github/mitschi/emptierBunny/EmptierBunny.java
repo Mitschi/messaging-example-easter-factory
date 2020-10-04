@@ -23,10 +23,10 @@ public class EmptierBunny {
             System.out.println("EmptierBunny "+name+" is starting with the job.");
             boolean interrupted=false;
 
-            MessageConsumer consumer = ActiveMQUtils.createConsumer("localhost", "laidEggs");
+            MessageConsumer consumer = ActiveMQUtils.createConsumer(ActiveMQUtils.CURRENT_TESTHOST, "laidEggs");
 
             ActiveMQUtils emptiedEggsQueue = new ActiveMQUtils();
-            emptiedEggsQueue.init("emptiedEggs","localhost");
+            emptiedEggsQueue.init("emptiedEggs",ActiveMQUtils.CURRENT_TESTHOST);
 
             while(!interrupted) {
                 Message message = consumer.receive();
@@ -46,6 +46,7 @@ public class EmptierBunny {
         } catch (InterruptedException e) {
         } catch (Exception e) {
             System.out.println("Something happened.. try restart ;)");
+            e.printStackTrace();
         }
     }
 }
